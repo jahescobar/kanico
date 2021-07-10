@@ -8,12 +8,12 @@ spec:
     image: gcr.io/kaniko-project/executor:debug   #Debug option gives you more options, default latest
     args: ["--verbosity=trace",
            "--log-format=color",
-           "--dockerfile=Dockerfile", #replacce with the reference for dockerfile  "--dockerfile=/workspace/dockerfile",  
-            "--context=dir:///workspace",
-            "--destination=zelfick/kanico:0.0.1"] # replace with your dockerhub account
+           "--dockerfile=./Dockerfile", #replacce with the reference for dockerfile  "--dockerfile=/workspace/dockerfile",  
+           "--context=dir:///workspace/",
+           "--destination=zelfick/kanico:0.0.1"] # replace with your dockerhub account
     volumeMounts:
       - name: kaniko-secret
-        mountPath: /kaniko/.docker
+        mountPath: /kanico/.docker
       - name: dockerfile-storage
         mountPath: /workspace
   restartPolicy: Never
