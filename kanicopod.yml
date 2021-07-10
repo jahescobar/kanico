@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
   - name: kaniko
-    image: gcr.io/kaniko-project/executor:   #Debug option gives you more options, default latest
+    image: gcr.io/kaniko-project/executor:debug   #Debug option gives you more options, default latest
     args: ["--dockerfile=dockerfile",  #replacce with the path to or github where your dockerfile resides
             "--context=dir://workspace",
             "--destination=zelfick/kanico:0.0.1"] # replace with your dockerhub account
