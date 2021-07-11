@@ -11,5 +11,5 @@ spec:
     - ReadWriteOnce
   storageClassName: local-storage
   hostPath:
-    path: /home/jherran/videoamp/kanico
+    path: /home/jherran/videoamp/kaniko
           # <local-directory> # replace with local directory, such as "/home/<user-name>/kaniko"
